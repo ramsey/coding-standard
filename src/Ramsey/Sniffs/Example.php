@@ -20,10 +20,11 @@
 
 declare(strict_types=1);
 
-namespace Ramsey;
+namespace Ramsey\CodingStandard\Sniffs;
 
 /**
- * An example class to act as a starting point for developing your library
+ * This example exists to ensure builds do not fail. You may remove this example
+ * after adding additional PHP classes and tests.
  */
 class Example
 {
