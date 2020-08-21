@@ -21,6 +21,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Security
 
 
+## [1.0.3] - 2020-08-21
+
+### Fixed
+
+* Allow bin dir in dist packages, avoiding Composer warnings
+
+
 ## [1.0.2] - 2020-08-21
 
 ### Fixed
@@ -42,7 +49,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Initial release of Ramsey coding standard
 
 
-[Unreleased]: https://github.com/ramsey/php-library-coding-standard/compare/1.0.2...HEAD
+[Unreleased]: https://github.com/ramsey/php-library-coding-standard/compare/1.0.3...HEAD
+[1.0.3]: https://github.com/ramsey/php-library-coding-standard/commits/1.0.3
 [1.0.2]: https://github.com/ramsey/php-library-coding-standard/commits/1.0.2
 [1.0.1]: https://github.com/ramsey/php-library-coding-standard/commits/1.0.1
 [1.0.0]: https://github.com/ramsey/php-library-coding-standard/commits/1.0.0
