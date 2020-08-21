@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Format ruleset XML file.
+ */
+
+const RULESET = 'src/Ramsey/ruleset.xml';
+
+// Change to the repository root.
+chdir(realpath(dirname(__FILE__, 2)));
+
+$rulesetContents = file_get_contents(RULESET);
+
+$ruleset = new DOMDocument();
+$ruleset->loadXML($rulesetContents);
+
+if (file_put_contents(RULESET, $ruleset->saveXML()) === false) {
+    echo 'Unable to write to ' . RULESET . PHP_EOL;
+    exit(1);
+} else {
+    echo 'Formatted and updated ' . RULESET . PHP_EOL;
+}

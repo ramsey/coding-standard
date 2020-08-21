@@ -18,6 +18,7 @@
     ],
     "require": {
         "php": "^7.4 || ^8",
+        "ext-dom": "*",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "slevomat/coding-standard": "^6.3",
         "squizlabs/php_codesniffer": "^3.5"
@@ -25,18 +26,25 @@
     "require-dev": {
         "captainhook/captainhook": "^5.3",
         "ergebnis/composer-normalize": "^2.6",
-        "ramsey/conventional-commits": "^1.0"
+        "ramsey/conventional-commits": "^1.0",
+        "sebastian/diff": "^4.0"
     },
     "config": {
         "sort-packages": true
     },
     "bin": [
-        "bin/xmllint"
+        "bin/xmllint",
+        "bin/xmllint-fix"
     ],
     "scripts": {
         "post-autoload-dump": "captainhook install --ansi -f -s",
-        "pre-commit": "xmllint",
-        "test": "xmllint"
+        "br:lint": "xmllint",
+        "br:lint:fix": "xmllint-fix",
+        "pre-commit": [
+            "@br:lint:fix",
+            "@br:lint"
+        ],
+        "test": "@br:lint"
     },
     "scripts-descriptions": {
         "pre-commit": "These commands are run as part of a Git pre-commit hook installed using captainhook/captainhook. Each command should be prepared to accept a list of space-separated staged files.",

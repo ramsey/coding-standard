@@ -3,17 +3,11 @@
 
 /**
  * Lint ruleset XML file.
- *
- * DEPENDS: xmllint
- *   - Debian/Ubuntu: apt-get install libxml2-utils
- *   - macOS:         brew install libxml2
- *   - Windows:       Download binaries from https://www.zlatkovic.com/projects/libxml/
  */
 
-const DS = DIRECTORY_SEPARATOR;
-const RULESET = 'src' . DS . 'Ramsey' . DS . 'ruleset.xml';
-const XML_SCHEMA = 'resources' . DS . 'XMLSchema.xsd';
-const PHPCS_SCHEMA = 'vendor' . DS . 'squizlabs' . DS . 'php_codesniffer' . DS . 'phpcs.xsd';
+const RULESET = 'src/Ramsey/ruleset.xml';
+const XML_SCHEMA = 'resources/XMLSchema.xsd';
+const PHPCS_SCHEMA = 'vendor/squizlabs/php_codesniffer/phpcs.xsd';
 
 // Change to the repository root.
 chdir(realpath(dirname(__FILE__, 2)));
@@ -23,31 +17,40 @@ if (!is_readable(PHPCS_SCHEMA)) {
     exit(1);
 }
 
-// Check dependency
-shell_exec('hash xmllint');
+require_once 'vendor/autoload.php';
 
-$validatePhpcsCommand = 'xmllint --noout --schema '
-    . escapeshellarg(XML_SCHEMA)
-    . ' '
-    . escapeshellarg(PHPCS_SCHEMA);
+$checkIsValid = function (bool $isValid, string $filename): void {
+    if ($isValid) {
+        echo "{$filename} validates" . PHP_EOL;
+    } else {
+        echo "{$filename} fails to validate" . PHP_EOL;
+    }
+};
 
-$validateRulesetCommand = 'xmllint --noout --schema '
-    . escapeshellarg(PHPCS_SCHEMA)
-    . ' '
-    . escapeshellarg(RULESET);
+$phpcsSchemaContents = file_get_contents(PHPCS_SCHEMA);
+$rulesetContents = file_get_contents(RULESET);
 
-putenv('XMLLINT_INDENT=    ');
-$formattedFile = tempnam(sys_get_temp_dir(), 'ruleset');
-$formatCommand = 'xmllint --format ' . escapeshellarg(RULESET);
-file_put_contents($formattedFile, shell_exec($formatCommand));
+$phpcsSchema = new DOMDocument();
+$phpcsSchema->loadXML($phpcsSchemaContents);
+$isPhpcsSchemaValid = $phpcsSchema->schemaValidate(XML_SCHEMA);
+$checkIsValid($isPhpcsSchemaValid, PHPCS_SCHEMA);
 
-$diffCommand = 'diff -B '
-    . escapeshellarg(RULESET)
-    . ' '
-    . escapeshellarg($formattedFile);
+$ruleset = new DOMDocument();
+$ruleset->loadXML($rulesetContents);
+$isRulesetValid = $ruleset->schemaValidateSource($phpcsSchema->saveXML());
+$checkIsValid($isRulesetValid, RULESET);
 
-passthru($validatePhpcsCommand, $validatePhpcsReturn);
-passthru($validateRulesetCommand, $validateRulesetReturn);
-passthru($diffCommand, $diffReturn);
+$builder = new \SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder('', true);
+$differ = new \SebastianBergmann\Diff\Differ($builder);
+$diff = $differ->diff($rulesetContents, $ruleset->saveXML());
+$hasDifferences = $diff !== '';
 
-exit($validatePhpcsReturn + $validateRulesetReturn + $diffReturn);
+if ($hasDifferences) {
+    echo PHP_EOL;
+    echo 'I found the following issues with ' . RULESET . '.' . PHP_EOL;
+    echo 'You may fix these issues automatically with:' . PHP_EOL . PHP_EOL;
+    echo '  composer br:lint:fix' . PHP_EOL . PHP_EOL;
+    echo $diff . PHP_EOL;
+}
+
+exit($isPhpcsSchemaValid && $isRulesetValid && !$hasDifferences ? 0 : 1);
