@@ -60,10 +60,4 @@ jobs:
 
             - name: Validate ruleset
               if: ${{ matrix.os == 'ubuntu-latest' }}
-              run: bin/xmllint.sh
-
-            - name: Analyze & test
-              run: |
-                  composer br:lint
-                  composer br:analyze
-                  composer br:test:coverage:ci -- --coverage-text
+              run: composer br:lint
