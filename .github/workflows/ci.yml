@@ -53,14 +53,14 @@ jobs:
 
             - name: Install xmllint
               if: ${{ matrix.os == 'ubuntu-latest' }}
-              run: sudo apt-get install -y wget libxml2-utils
-
-            - name: Check ruleset
-              if: ${{ matrix.os == 'ubuntu-latest' }}
-              run: bin/xmllint.sh
+              run: sudo apt-get install -y libxml2-utils
 
             - name: Install dependencies
               run: composer install --no-interaction --prefer-dist --no-progress --no-suggest ${{ matrix.composer-options }}
+
+            - name: Validate ruleset
+              if: ${{ matrix.os == 'ubuntu-latest' }}
+              run: bin/xmllint.sh
 
             - name: Analyze & test
               run: |
