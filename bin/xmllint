@@ -22,7 +22,7 @@ require_once 'vendor/autoload.php';
 $printValidity = function (bool $isValid, string $filename): void {
     printf(
         '%s %s%s',
-        $filename
+        $filename,
         $isValid ? 'validates' : 'fails to validate',
         PHP_EOL
     );
