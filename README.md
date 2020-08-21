@@ -82,6 +82,26 @@ composer install
 
 Now, you are ready to develop!
 
+### Dependencies
+
+To run tests locally, you'll need `xmllint`, which is part of the
+[libxml2](http://xmlsoft.org) package.
+
+To install on Debian or Ubuntu:
+
+```bash
+apt-get install libxml2-utils
+```
+
+To install on macOS with [Homebrew](https://brew.sh):
+
+```bash
+brew install libxml2
+```
+
+To install on Windows,
+[download the binaries from Igor Zlatkovic](https://www.zlatkovic.com/projects/libxml/).
+
 ### Tooling
 
 This project uses [CaptainHook](https://github.com/CaptainHookPhp/captainhook)
