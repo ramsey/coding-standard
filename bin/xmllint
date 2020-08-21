@@ -19,12 +19,13 @@ if (!is_readable(PHPCS_SCHEMA)) {
 
 require_once 'vendor/autoload.php';
 
-$checkIsValid = function (bool $isValid, string $filename): void {
-    if ($isValid) {
-        echo "{$filename} validates" . PHP_EOL;
-    } else {
-        echo "{$filename} fails to validate" . PHP_EOL;
-    }
+$printValidity = function (bool $isValid, string $filename): void {
+    printf(
+        '%s %s%s',
+        $filename,
+        $isValid ? 'validates' : 'fails to validate',
+        PHP_EOL
+    );
 };
 
 $phpcsSchemaContents = file_get_contents(PHPCS_SCHEMA);
@@ -33,12 +34,12 @@ $rulesetContents = file_get_contents(RULESET);
 $phpcsSchema = new DOMDocument();
 $phpcsSchema->loadXML($phpcsSchemaContents);
 $isPhpcsSchemaValid = $phpcsSchema->schemaValidate(XML_SCHEMA);
-$checkIsValid($isPhpcsSchemaValid, PHPCS_SCHEMA);
+$printValidity($isPhpcsSchemaValid, PHPCS_SCHEMA);
 
 $ruleset = new DOMDocument();
 $ruleset->loadXML($rulesetContents);
 $isRulesetValid = $ruleset->schemaValidateSource($phpcsSchema->saveXML());
-$checkIsValid($isRulesetValid, RULESET);
+$printValidity($isRulesetValid, RULESET);
 
 $builder = new \SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder('', true);
 $differ = new \SebastianBergmann\Diff\Differ($builder);
@@ -46,11 +47,12 @@ $diff = $differ->diff($rulesetContents, $ruleset->saveXML());
 $hasDifferences = $diff !== '';
 
 if ($hasDifferences) {
-    echo PHP_EOL;
-    echo 'I found the following issues with ' . RULESET . '.' . PHP_EOL;
-    echo 'You may fix these issues automatically with:' . PHP_EOL . PHP_EOL;
-    echo '  composer br:lint:fix' . PHP_EOL . PHP_EOL;
-    echo $diff . PHP_EOL;
+    printf(
+        '%$1sI found the following issues with %s.%$1sYou may fix these issues automatically with:%$1s%$1s  composer br:lint:fix%$1s%$1s%s%$1s',
+        PHP_EOL,
+        RULESET,
+        $diff
+    );
 }
 
 exit($isPhpcsSchemaValid && $isRulesetValid && !$hasDifferences ? 0 : 1);
