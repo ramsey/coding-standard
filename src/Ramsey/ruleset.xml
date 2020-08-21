@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="../../vendor/squizlabs/php_codesniffer/phpcs.xsd"
-         name="Ramsey">
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../vendor/squizlabs/php_codesniffer/phpcs.xsd" name="Ramsey">
 
     <description>A common coding standard for Ramsey's PHP libraries.</description>
 
@@ -151,15 +149,8 @@
             <property name="linesCountBetweenDescriptionAndAnnotations" value="1"/>
             <property name="linesCountBetweenAnnotationsGroups" value="1"/>
             <property name="annotationsGroups" type="array">
-                <element value="
-                    @internal,
-                    @deprecated,
-                "/>
-                <element value="
-                    @link,
-                    @see,
-                    @uses,
-                "/>
+                <element value="@internal,@deprecated,"/>
+                <element value="@link,@see,@uses,"/>
                 <element value="@param"/>
                 <element value="@return"/>
                 <element value="@throws"/>
@@ -196,10 +187,10 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
         <properties>
             <property name="tokensToCheck" type="array">
-                <element value="T_RETURN" />
-                <element value="T_THROW" />
-                <element value="T_BREAK" />
-                <element value="T_CONTINUE" />
+                <element value="T_RETURN"/>
+                <element value="T_THROW"/>
+                <element value="T_BREAK"/>
+                <element value="T_CONTINUE"/>
             </property>
         </properties>
     </rule>
@@ -415,7 +406,7 @@
     <!-- Require 1 line before and after function, except at the top and bottom -->
     <rule ref="Squiz.WhiteSpace.FunctionSpacing">
         <properties>
-            <property name="spacing" value="1" />
+            <property name="spacing" value="1"/>
             <property name="spacingBeforeFirst" value="0"/>
             <property name="spacingAfterLast" value="0"/>
         </properties>
@@ -454,7 +445,7 @@
 
     <!-- Force camelCase variables -->
     <rule ref="Squiz.NamingConventions.ValidVariableName">
-        <exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore" />
+        <exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
     </rule>
 
 </ruleset>
