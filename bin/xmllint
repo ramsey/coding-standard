@@ -48,7 +48,7 @@ $hasDifferences = $diff !== '';
 
 if ($hasDifferences) {
     printf(
-        '%$1sI found the following issues with %s.%$1sYou may fix these issues automatically with:%$1s%$1s  composer br:lint:fix%$1s%$1s%s%$1s'
+        '%$1sI found the following issues with %s.%$1sYou may fix these issues automatically with:%$1s%$1s  composer br:lint:fix%$1s%$1s%s%$1s',
         PHP_EOL,
         RULESET,
         $diff
