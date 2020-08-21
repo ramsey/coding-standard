@@ -49,5 +49,4 @@ jobs:
               run: composer install --no-interaction --prefer-dist --no-progress --no-suggest ${{ matrix.composer-options }}
 
             - name: Validate ruleset
-              if: ${{ matrix.os == 'ubuntu-latest' }}
               run: composer test
