@@ -53,7 +53,7 @@ jobs:
 
             - name: Install xmllint
               if: ${{ matrix.os == 'ubuntu-latest' }}
-              run: sudo apt-get install -y wget libxml2-utils
+              run: sudo apt-get install -y libxml2-utils
 
             - name: Install dependencies
               run: composer install --no-interaction --prefer-dist --no-progress --no-suggest ${{ matrix.composer-options }}
