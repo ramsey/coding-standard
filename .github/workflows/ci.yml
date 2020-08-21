@@ -61,9 +61,3 @@ jobs:
 
             - name: Install dependencies
               run: composer install --no-interaction --prefer-dist --no-progress --no-suggest ${{ matrix.composer-options }}
-
-            - name: Analyze & test
-              run: |
-                  composer br:lint
-                  composer br:analyze
-                  composer br:test:coverage:ci -- --coverage-text
