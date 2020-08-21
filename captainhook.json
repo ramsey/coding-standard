@@ -29,7 +29,15 @@
                 ]
             },
             {
-                "action": "composer pre-commit {$STAGED_FILES|of-type:php}"
+                "action": "composer pre-commit-lint",
+                "conditions": [
+                    {
+                        "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileStaged\\Any",
+                        "args": [
+                            ["src/Ramsey/ruleset.xml"]
+                        ]
+                    }
+                ]
             },
             {
                 "action": "git add {$STAGED_FILES}"
