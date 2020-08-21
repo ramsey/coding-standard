@@ -20,7 +20,12 @@ if (!is_readable(PHPCS_SCHEMA)) {
 require_once 'vendor/autoload.php';
 
 $printValidity = function (bool $isValid, string $filename): void {
-    echo $isValid ? "{$filename} validates" . PHP_EOL : "{$filename} fails to validate" . PHP_EOL;
+    printf(
+        '%s %s%s',
+        $filename
+        $isValid ? 'validates' : 'fails to validate',
+        PHP_EOL
+    );
 };
 
 $phpcsSchemaContents = file_get_contents(PHPCS_SCHEMA);
