@@ -23,11 +23,11 @@ jobs:
 
         steps:
 
-            -   name: Configure Git
-                if: ${{ matrix.os == 'windows-latest' }}
-                run: |
-                    git config --system core.autocrlf false
-                    git config --system core.eol lf
+            - name: Configure Git
+              if: ${{ matrix.os == 'windows-latest' }}
+              run: |
+                  git config --system core.autocrlf false
+                  git config --system core.eol lf
 
             - name: Checkout
               uses: actions/checkout@v2
