@@ -3,25 +3,23 @@
 # Lint ruleset XML file.
 #
 # BASH-VERSION  :4.2+
-# DEPENDS       :apt-get install wget libxml2-utils
+# DEPENDS       :apt-get install libxml2-utils
 
 RULESET="src/Ramsey/ruleset.xml"
+XML_SCHEMA="resources/XMLSchema.xsd"
+PHPCS_SCHEMA="vendor/squizlabs/php_codesniffer/phpcs.xsd"
 
 set -e
 
 # Current directory should be repository root
 test -r "$RULESET"
 
+# Dependencies should be installed with 'composer install'
+test -r "$PHPCS_SCHEMA"
+
 # Check dependency
 hash xmllint
 
-# Create temporary directory
-mkdir -p tmp
-
-# Download XML schema definitions
-wget -nv -N -P tmp/ "https://github.com/squizlabs/PHP_CodeSniffer/raw/master/phpcs.xsd"
-wget -nv -N -P tmp/ "https://www.w3.org/2012/04/XMLSchema.xsd"
-
-xmllint --noout --schema tmp/XMLSchema.xsd tmp/phpcs.xsd
-xmllint --noout --schema tmp/phpcs.xsd "$RULESET"
+xmllint --noout --schema "$XML_SCHEMA" "$PHPCS_SCHEMA"
+xmllint --noout --schema "$PHPCS_SCHEMA" "$RULESET"
 diff -B "$RULESET" <(XMLLINT_INDENT="    " xmllint --format "$RULESET")

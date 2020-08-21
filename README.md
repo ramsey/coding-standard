@@ -96,6 +96,7 @@ base folder structure and layout.
 | ------------------| ---------------------------------------------- |
 | **bin/**          | Commands and scripts for this project          |
 | **build/**        | Cache, logs, reports, etc. for project builds  |
+| **resources/**    | Additional resources for this project          |
 | **src/**          | Project library and application source code    |
 | **tests/**        | Tests for this project                         |
 
