@@ -1,0 +1,56 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Lint ruleset XML file.
+ */
+
+const RULESET = 'src/Ramsey/ruleset.xml';
+const XML_SCHEMA = 'resources/XMLSchema.xsd';
+const PHPCS_SCHEMA = 'vendor/squizlabs/php_codesniffer/phpcs.xsd';
+
+// Change to the repository root.
+chdir(realpath(dirname(__FILE__, 2)));
+
+if (!is_readable(PHPCS_SCHEMA)) {
+    echo "Unable to read phpcs.xsd; perhaps you forgot to run 'composer update'?\n";
+    exit(1);
+}
+
+require_once 'vendor/autoload.php';
+
+$checkIsValid = function (bool $isValid, string $filename): void {
+    if ($isValid) {
+        echo "{$filename} validates" . PHP_EOL;
+    } else {
+        echo "{$filename} fails to validate" . PHP_EOL;
+    }
+};
+
+$phpcsSchemaContents = file_get_contents(PHPCS_SCHEMA);
+$rulesetContents = file_get_contents(RULESET);
+
+$phpcsSchema = new DOMDocument();
+$phpcsSchema->loadXML($phpcsSchemaContents);
+$isPhpcsSchemaValid = $phpcsSchema->schemaValidate(XML_SCHEMA);
+$checkIsValid($isPhpcsSchemaValid, PHPCS_SCHEMA);
+
+$ruleset = new DOMDocument();
+$ruleset->loadXML($rulesetContents);
+$isRulesetValid = $ruleset->schemaValidateSource($phpcsSchema->saveXML());
+$checkIsValid($isRulesetValid, RULESET);
+
+$builder = new \SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder('', true);
+$differ = new \SebastianBergmann\Diff\Differ($builder);
+$diff = $differ->diff($rulesetContents, $ruleset->saveXML());
+$hasDifferences = $diff !== '';
+
+if ($hasDifferences) {
+    echo PHP_EOL;
+    echo 'I found the following issues with ' . RULESET . '.' . PHP_EOL;
+    echo 'You may fix these issues automatically with:' . PHP_EOL . PHP_EOL;
+    echo '  composer br:lint:fix' . PHP_EOL . PHP_EOL;
+    echo $diff . PHP_EOL;
+}
+
+exit($isPhpcsSchemaValid && $isRulesetValid && !$hasDifferences ? 0 : 1);
