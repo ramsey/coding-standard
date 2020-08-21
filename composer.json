@@ -38,11 +38,6 @@
     "config": {
         "sort-packages": true
     },
-    "autoload": {
-        "psr-4": {
-            "Ramsey\\CodingStandard\\": "src/Ramsey/"
-        }
-    },
     "autoload-dev": {
         "psr-4": {
             "Ramsey\\Test\\CodingStandard\\": "tests/"
