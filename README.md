@@ -8,7 +8,6 @@
     <a href="https://github.com/ramsey/coding-standard"><img src="http://img.shields.io/badge/source-ramsey/coding--standard-blue.svg?style=flat-square" alt="Source Code"></a>
     <a href="https://packagist.org/packages/ramsey/coding-standard"><img src="https://img.shields.io/packagist/v/ramsey/coding-standard.svg?style=flat-square&label=release" alt="Download Package"></a>
     <a href="https://php.net"><img src="https://img.shields.io/packagist/php-v/ramsey/coding-standard.svg?style=flat-square&colorB=%238892BF" alt="PHP Programming Language"></a>
-    <br>
     <a href="https://github.com/ramsey/coding-standard/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/ramsey/coding-standard.svg?style=flat-square&colorB=darkcyan" alt="Read License"></a>
     <a href="https://github.com/ramsey/coding-standard/actions?query=workflow%3Amain"><img src="https://img.shields.io/github/workflow/status/ramsey/coding-standard/main?logo=github&style=flat-square" alt="Build Status"></a>
     <a href="https://packagist.org/packages/ramsey/coding-standard/stats"><img src="https://img.shields.io/packagist/dt/ramsey/coding-standard.svg?style=flat-square&colorB=darkmagenta" alt="Package downloads on Packagist"></a>
