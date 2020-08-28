@@ -1,17 +1,17 @@
-<h1 align="center">ramsey/php-library-coding-standard</h1>
+<h1 align="center">ramsey/coding-standard</h1>
 
 <p align="center">
     <strong>A common coding standard for Ramsey's PHP libraries.</strong>
 </p>
 
 <p align="center">
-    <a href="https://github.com/ramsey/php-library-coding-standard"><img src="http://img.shields.io/badge/source-ramsey/php--library--coding--standard-blue.svg?style=flat-square" alt="Source Code"></a>
-    <a href="https://packagist.org/packages/ramsey/php-library-coding-standard"><img src="https://img.shields.io/packagist/v/ramsey/php-library-coding-standard.svg?style=flat-square&label=release" alt="Download Package"></a>
-    <a href="https://php.net"><img src="https://img.shields.io/packagist/php-v/ramsey/php-library-coding-standard.svg?style=flat-square&colorB=%238892BF" alt="PHP Programming Language"></a>
+    <a href="https://github.com/ramsey/coding-standard"><img src="http://img.shields.io/badge/source-ramsey/coding--standard-blue.svg?style=flat-square" alt="Source Code"></a>
+    <a href="https://packagist.org/packages/ramsey/coding-standard"><img src="https://img.shields.io/packagist/v/ramsey/coding-standard.svg?style=flat-square&label=release" alt="Download Package"></a>
+    <a href="https://php.net"><img src="https://img.shields.io/packagist/php-v/ramsey/coding-standard.svg?style=flat-square&colorB=%238892BF" alt="PHP Programming Language"></a>
     <br>
-    <a href="https://github.com/ramsey/php-library-coding-standard/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/ramsey/php-library-coding-standard.svg?style=flat-square&colorB=darkcyan" alt="Read License"></a>
-    <a href="https://github.com/ramsey/php-library-coding-standard/actions?query=workflow%3Amain"><img src="https://img.shields.io/github/workflow/status/ramsey/php-library-coding-standard/main?logo=github&style=flat-square" alt="Build Status"></a>
-    <a href="https://packagist.org/packages/ramsey/php-library-coding-standard/stats"><img src="https://img.shields.io/packagist/dt/ramsey/php-library-coding-standard.svg?style=flat-square&colorB=darkmagenta" alt="Package downloads on Packagist"></a>
+    <a href="https://github.com/ramsey/coding-standard/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/ramsey/coding-standard.svg?style=flat-square&colorB=darkcyan" alt="Read License"></a>
+    <a href="https://github.com/ramsey/coding-standard/actions?query=workflow%3Amain"><img src="https://img.shields.io/github/workflow/status/ramsey/coding-standard/main?logo=github&style=flat-square" alt="Build Status"></a>
+    <a href="https://packagist.org/packages/ramsey/coding-standard/stats"><img src="https://img.shields.io/packagist/dt/ramsey/coding-standard.svg?style=flat-square&colorB=darkmagenta" alt="Package downloads on Packagist"></a>
     <a href="https://phpc.chat/channel/ramsey"><img src="https://img.shields.io/badge/phpc.chat-%23ramsey-darkslateblue?style=flat-square" alt="Chat with the maintainers"></a>
 </p>
 
@@ -31,7 +31,7 @@ uphold this code.
 Install this package as a dependency using [Composer](https://getcomposer.org).
 
 ``` bash
-composer require --dev ramsey/php-library-coding-standard
+composer require --dev ramsey/coding-standard
 ```
 
 ## Usage
@@ -102,6 +102,6 @@ base folder structure and layout.
 
 ## Copyright and License
 
-The ramsey/php-library-coding-standard library is copyright © [Ben Ramsey](https://benramsey.com)
+The ramsey/coding-standard library is copyright © [Ben Ramsey](https://benramsey.com)
 and licensed for use under the terms of the
 MIT License (MIT). Please see [LICENSE](LICENSE) for more information.

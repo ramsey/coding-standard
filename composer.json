@@ -1,5 +1,5 @@
 {
-    "name": "ramsey/php-library-coding-standard",
+    "name": "ramsey/coding-standard",
     "type": "phpcodesniffer-standard",
     "description": "A common coding standard for Ramsey's PHP libraries.",
     "keywords": [
