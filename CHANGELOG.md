@@ -21,6 +21,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Security
 
 
+## [1.1.1] - 2020-08-28
+
+### Fixed
+
+* Explicitly require [PHPCSUtils](https://github.com/PHPCSStandards/PHPCSUtils)
+  to avoid setting minimum-stability
+
+
 ## [1.1.0] - 2020-08-27
 
 ### Changed
@@ -56,7 +64,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Initial release of Ramsey coding standard
 
 
-[Unreleased]: https://github.com/ramsey/coding-standard/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/ramsey/coding-standard/compare/1.1.1...HEAD
+[1.1.1]: https://github.com/ramsey/coding-standard/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/ramsey/coding-standard/compare/1.0.3...1.1.0
 [1.0.3]: https://github.com/ramsey/coding-standard/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/ramsey/coding-standard/compare/1.0.1...1.0.2
