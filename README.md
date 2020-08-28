@@ -92,14 +92,6 @@ to validate all staged changes prior to commit.
 This project uses [pds/skeleton](https://github.com/php-pds/skeleton) as its
 base folder structure and layout.
 
-| Name              | Description                                    |
-| ------------------| ---------------------------------------------- |
-| **bin/**          | Commands and scripts for this project          |
-| **build/**        | Cache, logs, reports, etc. for project builds  |
-| **resources/**    | Additional resources for this project          |
-| **src/**          | Project library and application source code    |
-| **tests/**        | Tests for this project                         |
-
 ## Copyright and License
 
 The ramsey/coding-standard library is copyright © [Ben Ramsey](https://benramsey.com)
