@@ -18,8 +18,8 @@
 
 This is a custom coding standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 It borrows many sniffs from [Slevomat Coding Standard](https://github.com/slevomat/coding-standard)
-and combines them into a single unified, common standard for Ramsey's PHP
-libraries.
+and [PHPCSExtra](https://github.com/PHPCSStandards/PHPCSExtra) and combines them
+into a single unified, common standard for Ramsey's PHP libraries.
 
 This project adheres to a [code of conduct](CODE_OF_CONDUCT.md).
 By participating in this project and its community, you are expected to
