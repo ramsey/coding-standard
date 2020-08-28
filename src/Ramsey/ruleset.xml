@@ -230,6 +230,9 @@
         </properties>
     </rule>
 
+    <!-- Require extends and implements statements to be alphabetically sorted -->
+    <rule ref="Universal.OOStructures.AlphabeticExtendsImplements"/>
+
     <!-- Forbid fancy group uses -->
     <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
 
