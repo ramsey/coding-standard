@@ -5,6 +5,9 @@
  * Lint ruleset XML file.
  */
 
+use SebastianBergmann\Diff\Differ;
+use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
+
 const RULESET = 'src/Ramsey/ruleset.xml';
 const XML_SCHEMA = 'resources/XMLSchema.xsd';
 const PHPCS_SCHEMA = 'vendor/squizlabs/php_codesniffer/phpcs.xsd';
@@ -41,14 +44,14 @@ $ruleset->loadXML($rulesetContents);
 $isRulesetValid = $ruleset->schemaValidateSource($phpcsSchema->saveXML());
 $printValidity($isRulesetValid, RULESET);
 
-$builder = new \SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder('', true);
-$differ = new \SebastianBergmann\Diff\Differ($builder);
+$builder = new UnifiedDiffOutputBuilder('', true);
+$differ = new Differ($builder);
 $diff = $differ->diff($rulesetContents, $ruleset->saveXML());
 $hasDifferences = $diff !== '';
 
 if ($hasDifferences) {
     printf(
-        '%$1sI found the following issues with %s.%$1sYou may fix these issues automatically with:%$1s%$1s  composer br:lint:fix%$1s%$1s%s%$1s',
+        '%$1sI found the following issues with %s.%$1sYou may fix these issues automatically with:%$1s%$1s  composer lint:fix%$1s%$1s%s%$1s',
         PHP_EOL,
         RULESET,
         $diff

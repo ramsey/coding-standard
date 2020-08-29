@@ -40,17 +40,17 @@
     ],
     "scripts": {
         "post-autoload-dump": "captainhook install --ansi -f -s",
-        "br:lint": "xmllint",
-        "br:lint:fix": "xmllint-fix",
+        "lint": "xmllint",
+        "lint:fix": "xmllint-fix",
         "pre-commit-lint": [
-            "@br:lint:fix",
-            "@br:lint"
+            "@lint:fix",
+            "@lint"
         ],
-        "test": "@br:lint"
+        "test": "@lint"
     },
     "scripts-descriptions": {
-        "br:lint": "Checks all source code for coding standards issues.",
-        "br:lint:fix": "Checks source code for coding standards issues and fixes them, if possible.",
+        "lint": "Checks all source code for coding standards issues.",
+        "lint:fix": "Checks source code for coding standards issues and fixes them, if possible.",
         "pre-commit-lint": "Runs lint and lint-fix commands during the pre-commit stage.",
         "test": "Shortcut to run the full test suite."
     }
