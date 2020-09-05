@@ -21,6 +21,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Security
 
 
+## [1.2.0] - 2020-09-05
+
+### Added
+
+* Revised rules for absolute class name references
+
+
 ## [1.1.2] - 2020-08-28
 
 ### Fixed
@@ -71,7 +78,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Initial release of Ramsey coding standard
 
 
-[Unreleased]: https://github.com/ramsey/coding-standard/compare/1.1.2...HEAD
+[Unreleased]: https://github.com/ramsey/coding-standard/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/ramsey/coding-standard/compare/1.1.2...1.2.0
 [1.1.2]: https://github.com/ramsey/coding-standard/compare/1.1.1...1.1.2
 [1.1.1]: https://github.com/ramsey/coding-standard/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/ramsey/coding-standard/compare/1.0.3...1.1.0
