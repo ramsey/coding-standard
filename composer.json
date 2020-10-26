@@ -28,11 +28,16 @@
         "ext-dom": "*",
         "captainhook/captainhook": "^5.3",
         "ergebnis/composer-normalize": "^2.6",
-        "ramsey/conventional-commits": "^1.0",
+        "ramsey/conventional-commits": "^1.1",
         "sebastian/diff": "^4.0"
     },
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "ramsey/conventional-commits": {
+            "configFile": "conventional-commits.json"
+        }
     },
     "bin": [
         "bin/xmllint",
