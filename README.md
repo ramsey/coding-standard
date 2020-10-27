@@ -9,7 +9,7 @@
     <a href="https://packagist.org/packages/ramsey/coding-standard"><img src="https://img.shields.io/packagist/v/ramsey/coding-standard.svg?style=flat-square&label=release" alt="Download Package"></a>
     <a href="https://php.net"><img src="https://img.shields.io/packagist/php-v/ramsey/coding-standard.svg?style=flat-square&colorB=%238892BF" alt="PHP Programming Language"></a>
     <a href="https://github.com/ramsey/coding-standard/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/ramsey/coding-standard.svg?style=flat-square&colorB=darkcyan" alt="Read License"></a>
-    <a href="https://github.com/ramsey/coding-standard/actions?query=workflow%3Amain"><img src="https://img.shields.io/github/workflow/status/ramsey/coding-standard/main?logo=github&style=flat-square" alt="Build Status"></a>
+    <a href="https://github.com/ramsey/coding-standard/actions?query=workflow%3ACI"><img src="https://img.shields.io/github/workflow/status/ramsey/coding-standard/CI?label=CI&logo=github&style=flat-square" alt="Build Status"></a>
     <a href="https://packagist.org/packages/ramsey/coding-standard/stats"><img src="https://img.shields.io/packagist/dt/ramsey/coding-standard.svg?style=flat-square&colorB=darkmagenta" alt="Package downloads on Packagist"></a>
     <a href="https://phpc.chat/channel/ramsey"><img src="https://img.shields.io/badge/phpc.chat-%23ramsey-darkslateblue?style=flat-square" alt="Chat with the maintainers"></a>
 </p>
