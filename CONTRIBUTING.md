@@ -101,7 +101,7 @@ Now, you are ready to develop!
 This project uses [CaptainHook](https://github.com/CaptainHookPhp/captainhook)
 to validate all staged changes prior to commit.
 
-#### Project Structure
+### Project Structure
 
 This project uses [pds/skeleton](https://github.com/php-pds/skeleton) as its
 base folder structure and layout.
