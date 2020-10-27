@@ -106,7 +106,7 @@ to validate all staged changes prior to commit.
 This project uses [pds/skeleton](https://github.com/php-pds/skeleton) as its
 base folder structure and layout.
 
-## Running Tests
+### Running Tests
 
 The following must pass before we will accept a pull request. If this does not
 pass, it will result in a complete build failure. Before you can run this, be
