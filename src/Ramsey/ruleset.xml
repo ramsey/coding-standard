@@ -451,4 +451,10 @@
         <exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
     </rule>
 
+    <!-- Enforce the use of strict comparisons. -->
+    <rule ref="Universal.Operators.StrictComparisons"/>
+
+    <!-- Checks duplicate spaces anywhere because there aren't sniffs for every part of code to check formatting. -->
+    <rule ref="SlevomatCodingStandard.Whitespaces.DuplicateSpaces"/>
+
 </ruleset>

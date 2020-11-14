@@ -6,36 +6,29 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [Unreleased]
+## 1.3.0 - 2020-11-14
 
 ### Added
 
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
+* Enforce the use of strict comparisons.
+* Check for and disallow duplicate spaces everywhere.
 
 
-## [1.2.0] - 2020-09-05
+## 1.2.0 - 2020-09-05
 
 ### Added
 
 * Revised rules for absolute class name references
 
 
-## [1.1.2] - 2020-08-28
+## 1.1.2 - 2020-08-28
 
 ### Fixed
 
 * Use correct command prefixes
 
 
-## [1.1.1] - 2020-08-28
+## 1.1.1 - 2020-08-28
 
 ### Fixed
 
@@ -43,47 +36,36 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   to avoid setting minimum-stability
 
 
-## [1.1.0] - 2020-08-27
+## 1.1.0 - 2020-08-27
 
 ### Changed
 
 * Package name is now "ramsey/coding-standard"
 
 
-## [1.0.3] - 2020-08-21
+## 1.0.3 - 2020-08-21
 
 ### Fixed
 
 * Allow bin dir in dist packages, avoiding Composer warnings
 
 
-## [1.0.2] - 2020-08-21
+## 1.0.2 - 2020-08-21
 
 ### Fixed
 
 * Move ext-dom to require-dev
 
 
-## [1.0.1] - 2020-08-21
+## 1.0.1 - 2020-08-21
 
 ### Fixed
 
 * Remove unnecessary (and unused) tools, commands, and code
 
 
-## [1.0.0] - 2020-08-20
+## 1.0.0 - 2020-08-20
 
 ### Added
 
 * Initial release of Ramsey coding standard
-
-
-[Unreleased]: https://github.com/ramsey/coding-standard/compare/1.2.0...HEAD
-[1.2.0]: https://github.com/ramsey/coding-standard/compare/1.1.2...1.2.0
-[1.1.2]: https://github.com/ramsey/coding-standard/compare/1.1.1...1.1.2
-[1.1.1]: https://github.com/ramsey/coding-standard/compare/1.1.0...1.1.1
-[1.1.0]: https://github.com/ramsey/coding-standard/compare/1.0.3...1.1.0
-[1.0.3]: https://github.com/ramsey/coding-standard/compare/1.0.2...1.0.3
-[1.0.2]: https://github.com/ramsey/coding-standard/compare/1.0.1...1.0.2
-[1.0.1]: https://github.com/ramsey/coding-standard/compare/1.0.0...1.0.1
-[1.0.0]: https://github.com/ramsey/coding-standard/commits/1.0.0
