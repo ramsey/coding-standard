@@ -24,9 +24,6 @@ jobs:
         operating-system:
           - "ubuntu-latest"
           - "windows-latest"
-        include:
-          - php-version: "8.0"
-            composer-options: "--ignore-platform-reqs"
     steps:
       - name: "Configure Git"
         if: ${{ matrix.operating-system == 'windows-latest' }}
@@ -38,8 +35,5 @@ jobs:
         with:
           php-version: "${{ matrix.php-version }}"
       - uses: "ramsey/composer-install@v1"
-        with:
-          dependency-versions: "${{ matrix.dependencies }}"
-          composer-options: "${{ matrix.composer-options }}"
       - name: "Validate ruleset"
         run: "composer test"
