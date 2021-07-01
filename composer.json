@@ -39,24 +39,15 @@
             "configFile": "conventional-commits.json"
         }
     },
-    "bin": [
-        "bin/xmllint",
-        "bin/xmllint-fix"
-    ],
     "scripts": {
         "post-autoload-dump": "captainhook install --ansi -f -s",
-        "lint": "xmllint",
-        "lint:fix": "xmllint-fix",
-        "pre-commit-lint": [
-            "@lint:fix",
-            "@lint"
-        ],
+        "lint": "./bin/xmllint",
+        "lint:fix": "./bin/xmllint-fix",
         "test": "@lint"
     },
     "scripts-descriptions": {
         "lint": "Checks all source code for coding standards issues.",
         "lint:fix": "Checks source code for coding standards issues and fixes them, if possible.",
-        "pre-commit-lint": "Runs lint and lint-fix commands during the pre-commit stage.",
         "test": "Shortcut to run the full test suite."
     }
 }
