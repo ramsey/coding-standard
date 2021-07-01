@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## 2.0.0 - 2021-06-30
+
+### Added
+
+* Check format of union type hints on PHP 8, using `SlevomatCodingStandard.TypeHints.UnionTypeHintFormat`.
+
+### Changed
+
+* Upgrade to slevomat/coding-standard version 7.
+
+  This may require downstream changes, since some Slevomat sniffs have BC breaks. This is why ramsey/coding-standard is bumping to version 2.0.0 for this change.
+
+  See the [Slevomat changelog for 7.0.0](https://github.com/slevomat/coding-standard/releases/tag/7.0.0) for details.
+
+
 ## 1.3.0 - 2020-11-14
 
 ### Added
