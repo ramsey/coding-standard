@@ -39,10 +39,14 @@
             "configFile": "conventional-commits.json"
         }
     },
+    "bin": [
+        "bin/xmllint",
+        "bin/xmllint-fix"
+    ],
     "scripts": {
         "post-autoload-dump": "captainhook install --ansi -f -s",
-        "lint": "./bin/xmllint",
-        "lint:fix": "./bin/xmllint-fix",
+        "lint": "xmllint",
+        "lint:fix": "xmllint-fix",
         "test": "@lint"
     },
     "scripts-descriptions": {
