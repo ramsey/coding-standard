@@ -311,12 +311,14 @@
 
     <!-- Require presence of declare(strict_types=1) -->
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <!-- Ignore whitespace requirements for lines occurring before declare(strict_types=1).
+             In general, we have two lines before this statement, one before the
+             file header comment and one after. The sniff does not count any
+             newlines from the comment block. However, in tests, we don't use
+             file header comments, so we have only one line before this
+             statement. This causes problems, so we just ignore this error. -->
+        <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.IncorrectWhitespaceBeforeDeclare"/>
         <properties>
-            <!--
-                Two newlines accounts for 1 newline, the file header comment,
-                and 1 more newline before declare(strict_types=1).
-            -->
-            <property name="linesCountBeforeDeclare" value="2"/>
             <property name="linesCountAfterDeclare" value="1"/>
             <property name="spacesCountAroundEqualsSign" value="0"/>
         </properties>

@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## 2.0.1 - 2021-06-30
+
+### Fixed
+
+* Ignore the `IncorrectWhitespaceBeforeDeclare` error emitted by the `SlevomatCodingStandard.TypeHints.DeclareStrictTypes` sniff.
+
+  In my personal projects, I usually have 2 newlines before the `declare` statement. One before the file header comment and one after. However, in tests, I have no file header comment, so there is only 1 newline before the `declare` statement. Since I like my tests to follow the same coding standard as the rest of my source, it is easiest to ignore this error.
+
+
 ## 2.0.0 - 2021-06-30
 
 ### Added
