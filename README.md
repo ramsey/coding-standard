@@ -1,7 +1,7 @@
 <h1 align="center">ramsey/coding-standard</h1>
 
 <p align="center">
-    <strong>A common coding standard for Ramsey's PHP libraries.</strong>
+    <strong>A common coding standard for <a href="https://github.com/ramsey">@ramsey's</a> PHP libraries.</strong>
 </p>
 
 <p align="center">
@@ -11,7 +11,6 @@
     <a href="https://github.com/ramsey/coding-standard/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/ramsey/coding-standard.svg?style=flat-square&colorB=darkcyan" alt="Read License"></a>
     <a href="https://github.com/ramsey/coding-standard/actions?query=workflow%3ACI"><img src="https://img.shields.io/github/workflow/status/ramsey/coding-standard/CI?label=CI&logo=github&style=flat-square" alt="Build Status"></a>
     <a href="https://packagist.org/packages/ramsey/coding-standard/stats"><img src="https://img.shields.io/packagist/dt/ramsey/coding-standard.svg?style=flat-square&colorB=darkmagenta" alt="Package downloads on Packagist"></a>
-    <a href="https://phpc.chat/channel/ramsey"><img src="https://img.shields.io/badge/phpc.chat-%23ramsey-darkslateblue?style=flat-square" alt="Chat with the maintainers"></a>
 </p>
 
 ## About
@@ -19,7 +18,8 @@
 This is a custom coding standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 It borrows many sniffs from [Slevomat Coding Standard](https://github.com/slevomat/coding-standard)
 and [PHPCSExtra](https://github.com/PHPCSStandards/PHPCSExtra) and combines them
-into a single unified, common standard for Ramsey's PHP libraries.
+into a single unified, common standard for [@ramsey's](https://github.com/ramsey)
+PHP libraries.
 
 This project adheres to a [code of conduct](CODE_OF_CONDUCT.md).
 By participating in this project and its community, you are expected to
