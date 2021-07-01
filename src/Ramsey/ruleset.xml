@@ -92,7 +92,7 @@
     <rule ref="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace"/>
 
     <!-- Require comma after last element in a multi-line method/function call -->
-    <rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall"/>
+    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>
 
     <!-- Require arrow functions for simple functions. -->
     <rule ref="SlevomatCodingStandard.Functions.RequireArrowFunction"/>
@@ -186,11 +186,11 @@
     <!-- Require consistent spacing for control structures (add a line break) -->
     <rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
         <properties>
-            <property name="tokensToCheck" type="array">
-                <element value="T_RETURN"/>
-                <element value="T_THROW"/>
-                <element value="T_BREAK"/>
-                <element value="T_CONTINUE"/>
+            <property name="jumpStatements" type="array">
+                <element value="break"/>
+                <element value="continue"/>
+                <element value="return"/>
+                <element value="throw"/>
             </property>
         </properties>
     </rule>
@@ -310,7 +310,17 @@
     </rule>
 
     <!-- Require presence of declare(strict_types=1) -->
-    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing"/>
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <!--
+                Two newlines accounts for 1 newline, the file header comment,
+                and 1 more newline before declare(strict_types=1).
+            -->
+            <property name="linesCountBeforeDeclare" value="2"/>
+            <property name="linesCountAfterDeclare" value="1"/>
+            <property name="spacesCountAroundEqualsSign" value="0"/>
+        </properties>
+    </rule>
 
     <!-- Require use of short versions of scalar types (i.e. int instead of integer) -->
     <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
@@ -420,6 +430,13 @@
 
     <!-- Require space around logical operators -->
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
+        <properties>
+            <property name="withSpaces" value="yes"/>
+            <property name="nullPosition" value="last"/>
+        </properties>
+    </rule>
 
     <!-- Forbid spaces around '->' operator -->
     <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
