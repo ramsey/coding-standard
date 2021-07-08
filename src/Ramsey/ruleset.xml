@@ -178,7 +178,11 @@
     <rule ref="SlevomatCodingStandard.Commenting.EmptyComment"/>
 
     <!-- Report invalid format of inline phpDocs with @var -->
-    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration"/>
+    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration">
+        <properties>
+            <property name="allowDocCommentAboveReturn" value="true"/>
+        </properties>
+    </rule>
 
     <!-- Report use of the useless @inheritDoc annotation -->
     <rule ref="SlevomatCodingStandard.Commenting.UselessInheritDocComment"/>
