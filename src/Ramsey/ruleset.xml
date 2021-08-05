@@ -57,6 +57,13 @@
     <!-- Forbid deprecated functions -->
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
 
+    <!-- Allow comments to run longer than 120 characters -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="ignoreComments" value="true"/>
+        </properties>
+    </rule>
+
     <!-- Forbid a bunch of functions -->
     <rule ref="Generic.PHP.ForbiddenFunctions">
         <properties>
