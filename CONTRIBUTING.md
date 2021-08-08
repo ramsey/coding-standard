@@ -119,6 +119,9 @@ command line, while in the project root directory:
 composer test
 ```
 
+CaptainHook will automatically run all tests before pushing to the remote
+repository.
+
 [github]: https://github.com/ramsey/coding-standard
 [issues]: https://github.com/ramsey/coding-standard/issues
 [pull requests]: https://github.com/ramsey/coding-standard/pulls

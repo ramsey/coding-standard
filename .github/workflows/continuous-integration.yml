@@ -1,20 +1,18 @@
-# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+# GitHub Actions Documentation: https://docs.github.com/en/actions
 
-name: "CI"
+name: "build"
 
-on:
-  pull_request:
-  push:
-    branches:
-      - "main"
+on: ["pull_request", "push"]
 
 env:
   COMPOSER_ROOT_VERSION: "1.99.99"
 
 jobs:
   xml-validation:
-    name: "XML Validation"
+    name: "XML validation"
     runs-on: ${{ matrix.operating-system }}
+    continue-on-error: ${{ matrix.experimental }}
+
     strategy:
       fail-fast: false
       matrix:
@@ -22,18 +20,38 @@ jobs:
           - "7.4"
           - "8.0"
         operating-system:
+          - "macos-latest"
           - "ubuntu-latest"
           - "windows-latest"
+        experimental:
+          - false
+        include:
+          - php-version: "8.1"
+            operating-system: "ubuntu-latest"
+            dependencies: "highest"
+            experimental: true
+            composer-options: "--ignore-platform-req=php"
+
     steps:
-      - name: "Configure Git"
+      - name: "Configure Git (for Windows)"
         if: ${{ matrix.operating-system == 'windows-latest' }}
         run: |
           git config --system core.autocrlf false
           git config --system core.eol lf
-      - uses: "actions/checkout@v2"
-      - uses: "shivammathur/setup-php@v2"
+
+      - name: "Checkout repository"
+        uses: "actions/checkout@v2"
+
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@v2"
         with:
           php-version: "${{ matrix.php-version }}"
-      - uses: "ramsey/composer-install@v1"
+          coverage: "none"
+
+      - name: "Install dependencies (Composer)"
+        uses: "ramsey/composer-install@v1"
+        with:
+          composer-options: "${{ matrix.composer-options }}"
+
       - name: "Validate ruleset"
         run: "composer test"

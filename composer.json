@@ -27,6 +27,7 @@
     "require-dev": {
         "ext-dom": "*",
         "captainhook/captainhook": "^5.3",
+        "captainhook/plugin-composer": "^5.3",
         "ergebnis/composer-normalize": "^2.6",
         "ramsey/conventional-commits": "^1.1",
         "sebastian/diff": "^4.0"
@@ -35,6 +36,9 @@
         "sort-packages": true
     },
     "extra": {
+        "captainhook": {
+            "force-install": true
+        },
         "ramsey/conventional-commits": {
             "configFile": "conventional-commits.json"
         }
@@ -44,7 +48,6 @@
         "bin/xmllint-fix"
     ],
     "scripts": {
-        "post-autoload-dump": "captainhook install --ansi -f -s",
         "lint": "xmllint",
         "lint:fix": "xmllint-fix",
         "test": "@lint"

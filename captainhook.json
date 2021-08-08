@@ -1,5 +1,8 @@
 {
     "config": {
+        "ansi-colors": true,
+        "fail-on-first-error": false,
+        "plugins": [],
         "verbosity": "normal"
     },
     "commit-msg": {
@@ -11,20 +14,31 @@
         ]
     },
     "pre-push": {
-        "enabled": false,
-        "actions": []
+        "enabled": true,
+        "actions": [
+            {
+                "action": "composer test"
+            }
+        ]
     },
     "pre-commit": {
         "enabled": true,
         "actions": [
             {
-                "action": "composer normalize --dry-run --ansi",
+                "action": "composer validate",
                 "conditions": [
                     {
                         "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileStaged\\Any",
-                        "args": [
-                            ["composer.json"]
-                        ]
+                        "args": [["composer.json"]]
+                    }
+                ]
+            },
+            {
+                "action": "composer normalize --dry-run",
+                "conditions": [
+                    {
+                        "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileStaged\\Any",
+                        "args": [["composer.json"]]
                     }
                 ]
             },
@@ -33,9 +47,7 @@
                 "conditions": [
                     {
                         "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileStaged\\Any",
-                        "args": [
-                            ["src/Ramsey/ruleset.xml"]
-                        ]
+                        "args": [["src/Ramsey/ruleset.xml"]]
                     }
                 ]
             }
@@ -61,9 +73,7 @@
                 "conditions": [
                     {
                         "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileChanged\\Any",
-                        "args": [
-                            ["composer.json", "composer.lock"]
-                        ]
+                        "args": [["composer.json", "composer.lock"]]
                     }
                 ]
             }
@@ -77,12 +87,18 @@
                 "conditions": [
                     {
                         "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileChanged\\Any",
-                        "args": [
-                            ["composer.json", "composer.lock"]
-                        ]
+                        "args": [["composer.json", "composer.lock"]]
                     }
                 ]
             }
         ]
+    },
+    "post-rewrite": {
+        "enabled": false,
+        "actions": []
+    },
+    "post-change": {
+        "enabled": false,
+        "actions": []
     }
 }

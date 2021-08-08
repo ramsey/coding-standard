@@ -1,16 +1,15 @@
 <h1 align="center">ramsey/coding-standard</h1>
 
 <p align="center">
-    <strong>A common coding standard for <a href="https://github.com/ramsey">@ramsey's</a> PHP libraries.</strong>
+    <strong>A common coding standard for <a href="https://github.com/ramsey">@ramsey</a>'s PHP libraries.</strong>
 </p>
 
 <p align="center">
-    <a href="https://github.com/ramsey/coding-standard"><img src="http://img.shields.io/badge/source-ramsey/coding--standard-blue.svg?style=flat-square" alt="Source Code"></a>
+    <a href="https://github.com/ramsey/coding-standard"><img src="https://img.shields.io/badge/source-ramsey/coding--standard-blue.svg?style=flat-square" alt="Source Code"></a>
     <a href="https://packagist.org/packages/ramsey/coding-standard"><img src="https://img.shields.io/packagist/v/ramsey/coding-standard.svg?style=flat-square&label=release" alt="Download Package"></a>
     <a href="https://php.net"><img src="https://img.shields.io/packagist/php-v/ramsey/coding-standard.svg?style=flat-square&colorB=%238892BF" alt="PHP Programming Language"></a>
     <a href="https://github.com/ramsey/coding-standard/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/ramsey/coding-standard.svg?style=flat-square&colorB=darkcyan" alt="Read License"></a>
-    <a href="https://github.com/ramsey/coding-standard/actions?query=workflow%3ACI"><img src="https://img.shields.io/github/workflow/status/ramsey/coding-standard/CI?label=CI&logo=github&style=flat-square" alt="Build Status"></a>
-    <a href="https://packagist.org/packages/ramsey/coding-standard/stats"><img src="https://img.shields.io/packagist/dt/ramsey/coding-standard.svg?style=flat-square&colorB=darkmagenta" alt="Package downloads on Packagist"></a>
+    <a href="https://github.com/ramsey/coding-standard/actions/workflows/continuous-integration.yml"><img src="https://img.shields.io/github/workflow/status/ramsey/coding-standard/build/main?style=flat-square&logo=github" alt="Build Status"></a>
 </p>
 
 ## About
@@ -27,7 +26,7 @@ uphold this code.
 
 ## Installation
 
-Install this package as a dependency using [Composer](https://getcomposer.org).
+Install this package as a development dependency using [Composer](https://getcomposer.org).
 
 ``` bash
 composer require --dev ramsey/coding-standard
@@ -68,6 +67,13 @@ Then, run PHP_CodeSniffer:
 
 Contributions are welcome! To contribute, please familiarize yourself with
 [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Coordinated Disclosure
+
+Keeping user information safe and secure is a top priority, and we welcome the
+contribution of external security researchers. If you believe you've found a
+security issue in software that is maintained in this repository, please read
+[SECURITY.md](SECURITY.md) for instructions on submitting a vulnerability report.
 
 ## Copyright and License
 
