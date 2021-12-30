@@ -10,48 +10,20 @@ env:
 jobs:
   xml-validation:
     name: "XML validation"
-    runs-on: ${{ matrix.operating-system }}
-    continue-on-error: ${{ matrix.experimental }}
-
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version:
-          - "7.4"
-          - "8.0"
-        operating-system:
-          - "macos-latest"
-          - "ubuntu-latest"
-          - "windows-latest"
-        experimental:
-          - false
-        include:
-          - php-version: "8.1"
-            operating-system: "ubuntu-latest"
-            dependencies: "highest"
-            experimental: true
-            composer-options: "--ignore-platform-req=php"
+    runs-on: "ubuntu-latest"
 
     steps:
-      - name: "Configure Git (for Windows)"
-        if: ${{ matrix.operating-system == 'windows-latest' }}
-        run: |
-          git config --system core.autocrlf false
-          git config --system core.eol lf
-
       - name: "Checkout repository"
         uses: "actions/checkout@v2"
 
       - name: "Install PHP"
         uses: "shivammathur/setup-php@v2"
         with:
-          php-version: "${{ matrix.php-version }}"
+          php-version: "latest"
           coverage: "none"
 
       - name: "Install dependencies (Composer)"
-        uses: "ramsey/composer-install@v1"
-        with:
-          composer-options: "${{ matrix.composer-options }}"
+        uses: "ramsey/composer-install@v2"
 
       - name: "Validate ruleset"
         run: "composer test"
