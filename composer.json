@@ -1,14 +1,14 @@
 {
     "name": "ramsey/coding-standard",
-    "type": "phpcodesniffer-standard",
     "description": "A common coding standard for Ramsey's PHP libraries.",
+    "license": "MIT",
+    "type": "phpcodesniffer-standard",
     "keywords": [
         "development",
         "phpcs",
         "standards",
         "tools"
     ],
-    "license": "MIT",
     "authors": [
         {
             "name": "Ben Ramsey",
@@ -32,7 +32,16 @@
         "ramsey/conventional-commits": "^1.1",
         "sebastian/diff": "^4.0"
     },
+    "bin": [
+        "bin/xmllint",
+        "bin/xmllint-fix"
+    ],
     "config": {
+        "allow-plugins": {
+            "captainhook/plugin-composer": true,
+            "ergebnis/composer-normalize": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
         "sort-packages": true
     },
     "extra": {
@@ -43,10 +52,6 @@
             "configFile": "conventional-commits.json"
         }
     },
-    "bin": [
-        "bin/xmllint",
-        "bin/xmllint-fix"
-    ],
     "scripts": {
         "lint": "xmllint",
         "lint:fix": "xmllint-fix",
