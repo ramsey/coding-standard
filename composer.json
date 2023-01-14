@@ -18,7 +18,8 @@
     ],
     "homepage": "https://github.com/ramsey/coding-standard",
     "support": {
-        "issues": "https://github.com/ramsey/coding-standard/issues"
+        "issues": "https://github.com/ramsey/coding-standard/issues",
+        "security": "https://github.com/ramsey/coding-standard/security/policy"
     },
     "funding": [
         {
