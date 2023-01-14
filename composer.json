@@ -27,10 +27,9 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-        "phpcsstandards/phpcsextra": "^1.0.0-alpha3",
-        "phpcsstandards/phpcsutils": "^1.0.0-alpha3",
+        "php": "^7.4 || ^8.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpcsstandards/phpcsextra": "^1.0",
         "slevomat/coding-standard": "^8.1",
         "squizlabs/php_codesniffer": "^3.5"
     },

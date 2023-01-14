@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## 2.1.0 - 2023-01-14
+
+### Changed
+
+* Bump phpcsstandards/phpcsextra and dealerdirect/phpcodesniffer-composer-installer
+  to their stable 1.0 releases.
+
+
 ## 2.0.3 - 2021-08-05
 
 ### Fixed
