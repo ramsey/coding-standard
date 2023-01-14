@@ -9,7 +9,7 @@
     <a href="https://packagist.org/packages/ramsey/coding-standard"><img src="https://img.shields.io/packagist/v/ramsey/coding-standard.svg?style=flat-square&label=release" alt="Download Package"></a>
     <a href="https://php.net"><img src="https://img.shields.io/packagist/php-v/ramsey/coding-standard.svg?style=flat-square&colorB=%238892BF" alt="PHP Programming Language"></a>
     <a href="https://github.com/ramsey/coding-standard/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/ramsey/coding-standard.svg?style=flat-square&colorB=darkcyan" alt="Read License"></a>
-    <a href="https://github.com/ramsey/coding-standard/actions/workflows/continuous-integration.yml"><img src="https://img.shields.io/github/workflow/status/ramsey/coding-standard/build/main?style=flat-square&logo=github" alt="Build Status"></a>
+    <a href="https://github.com/ramsey/coding-standard/actions/workflows/continuous-integration.yml"><img src="https://img.shields.io/github/actions/workflow/status/ramsey/coding-standard/continuous-integration.yml?branch=main&style=flat-square&logo=github" alt="Build Status"></a>
 </p>
 
 ## About
