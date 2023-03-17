@@ -4,10 +4,7 @@
     <description>A common coding standard for Ramsey's PHP libraries.</description>
 
     <!-- Rules -->
-    <rule ref="PSR12">
-        <!-- Already checked with the sniff Squiz.WhiteSpace.SemicolonSpacing.Incorrect -->
-        <exclude name="PSR12.Files.DeclareStatement.SpaceFoundBeforeSemicolon"/>
-    </rule>
+    <rule ref="PSR12"/>
 
     <!-- Warn about TODOs and FIXMEs in code. -->
     <rule ref="Generic.Commenting.Fixme"/>
@@ -100,6 +97,9 @@
 
     <!-- Require comma after last element in a multi-line method/function call -->
     <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>
+
+    <!-- Require comma after last element in a multi-line method/function declaration -->
+    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration"/>
 
     <!-- Require arrow functions for simple functions. -->
     <rule ref="SlevomatCodingStandard.Functions.RequireArrowFunction"/>
@@ -255,6 +255,7 @@
         <properties>
             <property name="allowFallbackGlobalConstants" value="false"/>
             <property name="allowFallbackGlobalFunctions" value="false"/>
+            <property name="allowFullyQualifiedExceptions" value="false"/>
             <property name="allowFullyQualifiedGlobalClasses" value="false"/>
             <property name="allowFullyQualifiedGlobalConstants" value="false"/>
             <property name="allowFullyQualifiedGlobalFunctions" value="false"/>

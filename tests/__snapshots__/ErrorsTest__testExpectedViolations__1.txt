@@ -1,0 +1,43 @@
+
+PHP CODE SNIFFER VIOLATION SOURCE SUMMARY
+----------------------------------------------------------------------
+    SOURCE                                                       COUNT
+----------------------------------------------------------------------
+[x] Generic.ControlStructures.InlineControlStructure.NotAllowed  7
+[x] Generic.Arrays.ArrayIndent.CloseBraceIncorrect               1
+[x] Generic.Arrays.ArrayIndent.CloseBraceNotNewLine              1
+[x] Generic.Arrays.ArrayIndent.KeyIncorrect                      1
+[x] Generic.Arrays.ArrayIndent.OpenBraceIncorrect                1
+[x] Generic.Arrays.DisallowLongArraySyntax.Found                 1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedDo               1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedElse             1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedElseif           1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedFinally          1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedFor              1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedForeach          1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedIf               1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedMatch            1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedSwitch           1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedTry              1
+[ ] Generic.CodeAnalysis.EmptyStatement.DetectedWhile            1
+[ ] Generic.CodeAnalysis.UnnecessaryFinalModifier.Found          1
+[ ] Generic.Commenting.Fixme.TaskFound                           1
+[ ] Generic.Commenting.Todo.TaskFound                            1
+[ ] Generic.Files.ByteOrderMark.Found                            1
+[x] Generic.Files.LineEndings.InvalidEOLChar                     1
+[ ] Generic.Files.LineLength.TooLong                             1
+[x] Generic.Formatting.DisallowMultipleStatements.SameLine       1
+[ ] Generic.Formatting.SpaceAfterCast.CommentFound               1
+[x] Generic.Formatting.SpaceAfterCast.NoSpace                    1
+[x] Generic.Formatting.SpaceAfterCast.TooMuchSpace               1
+[x] PSR2.Files.ClosingTag.NotAllowed                             1
+[x] PSR2.Files.EndFileNewline.NoneFound                          1
+[x] PSR2.Files.EndFileNewline.TooMany                            1
+[x] Squiz.WhiteSpace.SemicolonSpacing.Incorrect                  1
+[x] Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines            1
+[x] Squiz.WhiteSpace.SuperfluousWhitespace.EndLine               1
+----------------------------------------------------------------------
+A TOTAL OF 39 SNIFF VIOLATIONS WERE FOUND IN 33 SOURCES
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 16 MARKED SOURCES AUTOMATICALLY (22 VIOLATIONS IN TOTAL)
+----------------------------------------------------------------------
