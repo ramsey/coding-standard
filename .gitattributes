@@ -15,4 +15,5 @@
 /tests/                     export-ignore
 
 # We don't want Git to change the line endings in these files.
+/tests/Errors/Generic/Files/ByteOrderMark/Found.php binary
 /tests/Errors/Generic/Files/LineEndings/InvalidEOLChar.php binary
