@@ -2,6 +2,4 @@
 
 declare(strict_types=1);
 
-$foo = 'bar';
-
-echo $foo;
+echo 'This file has invalid EOL characters';
