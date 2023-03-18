@@ -60,7 +60,7 @@ jobs:
       - name: "Install dependencies (Composer)"
         uses: "ramsey/composer-install@2.2.0"
 
-      - name: "Run PHP CodeSniffer"
+      - name: "Run tests"
         run: "composer test:standards"
 
   debug-tests:
