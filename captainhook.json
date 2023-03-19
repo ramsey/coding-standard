@@ -47,7 +47,7 @@
                 "conditions": [
                     {
                         "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileStaged\\Any",
-                        "args": [["src/Ramsey/ruleset.xml"]]
+                        "args": [["Ramsey/ruleset.xml"]]
                     }
                 ]
             }
