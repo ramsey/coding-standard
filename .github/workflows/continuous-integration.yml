@@ -40,7 +40,9 @@ jobs:
         uses: "ramsey/composer-install@2.2.0"
 
       - name: "Validate ruleset"
-        run: "composer lint"
+        uses: "szepeviktor/phpcs-ruleset-validator@v0.1.0"
+        with:
+            xml_ruleset: "src/Ramsey/ruleset.xml"
 
   functional-tests:
     name: "Standards Tests"
