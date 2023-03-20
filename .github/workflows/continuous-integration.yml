@@ -42,7 +42,7 @@ jobs:
       - name: "Validate ruleset"
         uses: "szepeviktor/phpcs-ruleset-validator@v0.1.0"
         with:
-            xml_ruleset: "src/Ramsey/ruleset.xml"
+            xml_ruleset: "Ramsey/ruleset.xml"
 
   functional-tests:
     name: "Standards Tests"

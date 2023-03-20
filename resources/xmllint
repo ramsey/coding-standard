@@ -8,7 +8,7 @@
 use SebastianBergmann\Diff\Differ;
 use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
 
-const RULESET = 'src/Ramsey/ruleset.xml';
+const RULESET = 'Ramsey/ruleset.xml';
 const XML_SCHEMA = 'resources/XMLSchema.xsd';
 const PHPCS_SCHEMA = 'vendor/squizlabs/php_codesniffer/phpcs.xsd';
 
