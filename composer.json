@@ -75,7 +75,7 @@
     },
     "scripts-descriptions": {
         "lint": "Checks the XML rule set file for schema violations.",
-        "lint:fix": "Checks the XML rule set file for schema violoations and fixes them, if possible.",
+        "lint:fix": "Checks the XML rule set file for schema violations and fixes them, if possible.",
         "test": "Shortcut to run the full test suite.",
         "test:standards": "Functional tests to ensure the rule set doesn't deviate from the assumed standards."
     }
