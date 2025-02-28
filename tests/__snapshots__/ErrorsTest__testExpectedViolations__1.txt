@@ -30,6 +30,7 @@ PHP CODE SNIFFER VIOLATION SOURCE SUMMARY
 [ ] Generic.Formatting.SpaceAfterCast.CommentFound               1
 [x] Generic.Formatting.SpaceAfterCast.NoSpace                    1
 [x] Generic.Formatting.SpaceAfterCast.TooMuchSpace               1
+[ ] Internal.NoCodeFound                                         1
 [x] PSR2.Files.ClosingTag.NotAllowed                             1
 [x] PSR2.Files.EndFileNewline.NoneFound                          1
 [x] PSR2.Files.EndFileNewline.TooMany                            1
@@ -37,7 +38,7 @@ PHP CODE SNIFFER VIOLATION SOURCE SUMMARY
 [x] Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines            1
 [x] Squiz.WhiteSpace.SuperfluousWhitespace.EndLine               1
 ----------------------------------------------------------------------
-A TOTAL OF 39 SNIFF VIOLATIONS WERE FOUND IN 33 SOURCES
+A TOTAL OF 40 SNIFF VIOLATIONS WERE FOUND IN 34 SOURCES
 ----------------------------------------------------------------------
 PHPCBF CAN FIX THE 16 MARKED SOURCES AUTOMATICALLY (22 VIOLATIONS IN TOTAL)
 ----------------------------------------------------------------------
