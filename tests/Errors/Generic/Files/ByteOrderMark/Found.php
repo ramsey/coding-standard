@@ -1,5 +1,7 @@
-﻿<html lang="en">
-<body>
-<p>This file begins with a Byte Order Mark (BOM).</p>
-</body>
-</html>
+﻿<?php
+
+declare(strict_types=1);
+
+// This file begins with a UTF-8 BOM, i.e. \xEF\xBB\xBF
+// Do not change or save this file using your editor!
+echo "Hello, world!\n";
