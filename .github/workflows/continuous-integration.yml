@@ -37,7 +37,7 @@ jobs:
           coverage: "none"
 
       - name: "Install dependencies (Composer)"
-        uses: "ramsey/composer-install@3.0.0"
+        uses: "ramsey/composer-install@3.1.0"
 
       - name: "Validate ruleset"
         uses: "szepeviktor/phpcs-ruleset-validator@v0.4.0"
@@ -60,7 +60,7 @@ jobs:
           ini-values: "short_open_tag=On"
 
       - name: "Install dependencies (Composer)"
-        uses: "ramsey/composer-install@3.0.0"
+        uses: "ramsey/composer-install@3.1.0"
 
       - name: "Run tests"
         run: "composer test:standards"
@@ -81,7 +81,7 @@ jobs:
           ini-values: "short_open_tag=On"
 
       - name: "Install dependencies (Composer)"
-        uses: "ramsey/composer-install@3.0.0"
+        uses: "ramsey/composer-install@3.1.0"
 
       - name: "Run PHP CodeSniffer"
         run: "./vendor/bin/phpcs --standard=Ramsey --report=full tests/Errors || ( exit 0; )"
