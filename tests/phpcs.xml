@@ -3,7 +3,7 @@
 
     <arg name="extensions" value="php"/>
     <arg name="no-colors"/>
-    <arg value="sq"/>
+    <arg value="s"/>
     <arg name="report" value="source"/>
 
     <file>./Errors</file>
