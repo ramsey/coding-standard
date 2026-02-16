@@ -41,4 +41,3 @@ PHP CODE SNIFFER VIOLATION SOURCE SUMMARY
 A TOTAL OF 40 SNIFF VIOLATIONS WERE FOUND IN 34 SOURCES
 ----------------------------------------------------------------------
 PHPCBF CAN FIX THE 16 MARKED SOURCES AUTOMATICALLY (22 VIOLATIONS IN TOTAL)
-----------------------------------------------------------------------
