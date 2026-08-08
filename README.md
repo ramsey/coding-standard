@@ -14,7 +14,7 @@
 
 ## About
 
-This is a custom coding standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
+This is a custom coding standard for [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer).
 It borrows many sniffs from [Slevomat Coding Standard](https://github.com/slevomat/coding-standard)
 and [PHPCSExtra](https://github.com/PHPCSStandards/PHPCSExtra) and combines them
 into a single unified, common standard for [@ramsey's](https://github.com/ramsey)
